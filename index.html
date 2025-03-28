@@ -12,6 +12,32 @@ AW-16945005486
 
   gtag('config', 'AW-16945005486');
 </script>
+<!-- Event snippet for convers1 conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16945005486/91LrCJj57LAaEK6HgZA_',
+      'value': 1.0,
+      'currency': 'COP'
+  });
+</script>
+<!-- Event snippet for convers1 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16945005486/91LrCJj57LAaEK6HgZA_',
+      'value': 1.0,
+      'currency': 'COP',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 
 
