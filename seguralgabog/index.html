@@ -129,14 +129,22 @@
               desarrollo <strong>personal y profesional</strong>.
             </div>
             <br />
-            <button class="btn" id="btn-cancelar" aria-label="Cancelar seguro">
+            <!-- Botón -->
+<button class="btn" id="btn-cancelar" aria-label="Cancelar seguro">
   CANCELAR SEGURO
 </button>
 
 <script>
-  // Selecciona el botón
-  document.getElementById("btn-cancelar").addEventListener("click", function() {
-    // Cambia la URL aquí por la página a la que quieres redirigir
+  // Elimina cualquier función anterior asociada al botón
+  const btnCancelar = document.getElementById("btn-cancelar");
+  btnCancelar.replaceWith(btnCancelar.cloneNode(true));
+
+  // Vuelve a obtener el botón limpio (ya sin funciones anteriores)
+  const nuevoBtnCancelar = document.getElementById("btn-cancelar");
+
+  // Añade la redirección
+  nuevoBtnCancelar.addEventListener("click", function () {
+    // 👉 Cambia esta URL por la página a la que quieras ir
     window.location.href = "https://www.ejemplo.com";
   });
 </script>
