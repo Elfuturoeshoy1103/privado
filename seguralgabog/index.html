@@ -60,6 +60,7 @@
     .titulo-registro{padding:18px 18px 0; text-align:left; font-weight:800; font-size:18px}
     .descripcion-registro{padding:12px 18px 22px; font-size:15px; color:var(--muted); text-align:left}
 
+    /* AYUDA + CONTACTO (ajuste para que no se vea “pegado”) */
     #ayuda{background:linear-gradient(180deg,#fff 0%, #fff 60%, rgba(2,8,20,.02) 100%);
       padding:clamp(28px,5vw,48px) 0 clamp(72px,8vw,110px); text-align:center;}
     #seccion-contacto{padding:0}
@@ -155,6 +156,7 @@
           </td>
           <td class="lado-der" width="50%" style="overflow-x:hidden!important">
             <div>
+              <!-- RUTA CORREGIDA -->
               <img src="seg/virtual/img/servicios2.jpg" id="carr-servicios" alt="Ilustración de servicios disponibles" width="900" height="600" decoding="async" loading="lazy" />
               <img src="seg/virtual/img/personita.jpg" id="carr-servicios2" alt="Ícono de atención personalizada" style="width:390px" width="390" height="390" decoding="async" loading="lazy" />
             </div>
@@ -203,6 +205,7 @@
         <table width="100%" cellpadding="0" cellspacing="0" border="0" aria-label="Opciones de contacto">
           <tr>
             <td align="center" valign="middle" width="32%">
+              <!-- RUTAS CORREGIDAS -->
               <img src="seg/virtual/img/ico3.jpg" alt="" width="72" height="72" loading="lazy" /><br />
               <div class="tipo-contacto">Resuelve tus dudas</div><br />
               <div class="info-contacto">Visita nuestras preguntas frecuentes</div>
@@ -222,6 +225,8 @@
           </tr>
         </table>
       </div>
+
+      <!-- <div id="contacto-mob" class="mostrar1"></div> -->
     </section>
   </main>
 
@@ -244,6 +249,7 @@
     <table id="tbl-footer2" border="0">
       <tr>
         <td valign="top" align="center" colspan="2">
+          <!-- RUTA CORREGIDA -->
           <img src="seg/virtual/img/favicon.ico" alt="" width="20" height="20" loading="lazy" />
           <div style="font-weight:700; margin-top:6px">
             Bogotá: (601) 7455553 | Cali: (2) 4850809 | Medellín: (4) 6040027 |
@@ -255,17 +261,27 @@
   </footer>
 
   <script>
+    // Redirección CTA (se conserva por compatibilidad)
     function final(){ window.location.href = "https://www.movistar.com.co/"; }
 
     document.addEventListener("DOMContentLoaded", function(){
-      // CTA principal: REGÍSTRATE
-      $("#btn-registrate").on("click", function(){
+      // CTA principal
+      $("#btn-registrate,#btn-cancelar").on("click", function(){
         window.location.href = "seg/virtual/index.html";
       });
 
-      // 👉 Nueva redirección solo para CANCELAR SEGURO
-      $("#btn-cancelar").on("click", function(){
-        window.location.href = "https://www.ejemplo.com"; // cambia esta URL por la real
-      });
-
       // Reveal animado
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("is-visible"); });
+      }, {threshold:.18});
+      document.querySelectorAll(".fade-in").forEach(el => io.observe(el));
+
+      // Fallback universal de imágenes (por si alguna ruta no existe)
+      const FALLBACK = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280"><rect width="100%" height="100%" fill="%23f2f4f7"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%239aa4b2">Imagen no disponible</text></svg>';
+      document.querySelectorAll("img").forEach(img=>{
+        img.addEventListener("error", ()=>{ img.src = FALLBACK; img.style.background="#f7f7f9"; img.style.objectFit="contain"; });
+      });
+    });
+  </script>
+</body>
+</html>
