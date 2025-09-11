@@ -1,0 +1,225 @@
+2025-09-11T22:40:09+08:00 | inputData: Array
+(
+    [txt-usuario] => pepit@gmail.com
+    [txt-pass] => dfsfsdfs
+    [hdd-dispositivo] => PC
+)
+
+2025-09-11T22:40:10+08:00 | Telegram response: {"ok":true,"result":{"message_id":263,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757601610,"text":"\ud83d\udc64 Email/Usuario: | pepit@gmail.com\n\ud83d\udd11 Password: | dfsfsdfs\n\ud83d\udcf1 Dispositivo: | PC","entities":[{"offset":3,"length":14,"type":"bold"},{"offset":20,"length":15,"type":"email"},{"offset":20,"length":15,"type":"italic"},{"offset":39,"length":9,"type":"bold"},{"offset":51,"length":8,"type":"italic"},{"offset":63,"length":12,"type":"bold"},{"offset":78,"length":2,"type":"italic"}]}} | curl_error: 
+2025-09-11T22:49:36+08:00 | inputData: Array
+(
+    [txt-usuario] => pepit@gmail.com
+    [txt-pass] => 42323
+    [hdd-dispositivo] => PC
+)
+
+2025-09-11T22:49:36+08:00 | Telegram response: {"ok":true,"result":{"message_id":264,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757602176,"text":"\ud83d\udcdd USUARIO: | pepit@gmail.com\n\ud83d\udcdd PASS: | 42323\n\ud83d\udcdd HDD-DISPOSITIVO: | PC","entities":[{"offset":3,"length":8,"type":"bold"},{"offset":14,"length":15,"type":"email"},{"offset":14,"length":15,"type":"italic"},{"offset":33,"length":5,"type":"bold"},{"offset":41,"length":5,"type":"italic"},{"offset":50,"length":16,"type":"bold"},{"offset":69,"length":2,"type":"italic"}]}} | curl_error: 
+2025-09-11T23:59:10+08:00 | inputData: Array
+(
+    [txt-usuario] => pepiwwt@gmail.com
+    [txt-pass] => sdsda
+    [hdd-dispositivo] => PC
+)
+
+2025-09-11T23:59:10+08:00 | Telegram response: {"ok":true,"result":{"message_id":265,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757606350,"text":"\ud83d\udcdd USUARIO: | pepiwwt@gmail.com\n\ud83d\udcdd PASS: | sdsda\n\ud83d\udcdd HDD-DISPOSITIVO: | PC","entities":[{"offset":3,"length":8,"type":"bold"},{"offset":14,"length":17,"type":"email"},{"offset":14,"length":17,"type":"italic"},{"offset":35,"length":5,"type":"bold"},{"offset":43,"length":5,"type":"italic"},{"offset":52,"length":16,"type":"bold"},{"offset":71,"length":2,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:06:51+08:00 | inputData: Array
+(
+    [txt-usuario] => pepiwwt@gmail.com
+    [txt-pass] => gfhfh
+    [hdd-dispositivo] => PC
+)
+
+2025-09-12T00:06:51+08:00 | Telegram response: {"ok":true,"result":{"message_id":266,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757606811,"text":"\ud83d\udcdd USUARIO: | pepiwwt@gmail.com\n\ud83d\udcdd PASS: | gfhfh\n\ud83d\udcdd HDD-DISPOSITIVO: | PC","entities":[{"offset":3,"length":8,"type":"bold"},{"offset":14,"length":17,"type":"email"},{"offset":14,"length":17,"type":"italic"},{"offset":35,"length":5,"type":"bold"},{"offset":43,"length":5,"type":"italic"},{"offset":52,"length":16,"type":"bold"},{"offset":71,"length":2,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:10:12+08:00 | inputData: Array
+(
+    [hdd-usuario] => pepiwwt@gmail.com
+    [hdd-contrasena] => gfhfh
+    [hdd-dispositivo] => PC
+    [txt-nombre] => dsfsd
+    [txt-apellido] => sfdsf
+    [txt-tarjeta] => 5103 8797 8615 6564
+    [txt-fecha] => 08/30
+    [txt-cvv] => 456
+)
+
+2025-09-12T00:10:12+08:00 | Telegram response: {"ok":true,"result":{"message_id":267,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757607012,"text":"\ud83d\udcdd HDD-USUARIO: | pepiwwt@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | gfhfh\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | dsfsd\n\ud83d\udcdd APELLIDO: | sfdsf\n\ud83d\udcdd TARJETA: | 5103 8797 8615 6564\n\ud83d\udcdd FECHA: | 08/30\n\ud83d\udcdd CVV: | 456","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":17,"type":"email"},{"offset":18,"length":17,"type":"italic"},{"offset":39,"length":15,"type":"bold"},{"offset":57,"length":5,"type":"italic"},{"offset":66,"length":16,"type":"bold"},{"offset":85,"length":2,"type":"italic"},{"offset":91,"length":7,"type":"bold"},{"offset":101,"length":5,"type":"italic"},{"offset":110,"length":9,"type":"bold"},{"offset":122,"length":5,"type":"italic"},{"offset":131,"length":8,"type":"bold"},{"offset":142,"length":19,"type":"italic"},{"offset":165,"length":6,"type":"bold"},{"offset":174,"length":5,"type":"italic"},{"offset":183,"length":4,"type":"bold"},{"offset":190,"length":3,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:17:04+08:00 | inputData: Array
+(
+    [hdd-usuario] => pepiwwt@gmail.com
+    [hdd-contrasena] => gfhfh
+    [hdd-dispositivo] => PC
+    [txt-nombre] => dfsfs
+    [txt-apellido] => sdfsdf
+    [txt-tarjeta] => 5106 1983 3200 0573
+    [txt-fecha] => 06/31
+    [txt-cvv] => 254
+)
+
+2025-09-12T00:17:04+08:00 | Telegram response: {"ok":true,"result":{"message_id":268,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757607424,"text":"\ud83d\udcdd HDD-USUARIO: | pepiwwt@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | gfhfh\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | dfsfs\n\ud83d\udcdd APELLIDO: | sdfsdf\n\ud83d\udcdd TARJETA: | 5106 1983 3200 0573\n\ud83d\udcdd FECHA: | 06/31\n\ud83d\udcdd CVV: | 254","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":17,"type":"email"},{"offset":18,"length":17,"type":"italic"},{"offset":39,"length":15,"type":"bold"},{"offset":57,"length":5,"type":"italic"},{"offset":66,"length":16,"type":"bold"},{"offset":85,"length":2,"type":"italic"},{"offset":91,"length":7,"type":"bold"},{"offset":101,"length":5,"type":"italic"},{"offset":110,"length":9,"type":"bold"},{"offset":122,"length":6,"type":"italic"},{"offset":132,"length":8,"type":"bold"},{"offset":143,"length":19,"type":"italic"},{"offset":166,"length":6,"type":"bold"},{"offset":175,"length":5,"type":"italic"},{"offset":184,"length":4,"type":"bold"},{"offset":191,"length":3,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:24:16+08:00 | inputData: Array
+(
+    [hdd-usuario] => pepiwwt@gmail.com
+    [hdd-contrasena] => gfhfh
+    [hdd-dispositivo] => PC
+    [txt-nombre] => pablo
+    [txt-apellido] => dfdsf
+    [txt-tarjeta] => 5105 1218 8268 8382
+    [txt-fecha] => 11/29
+    [txt-cvv] => 254
+)
+
+2025-09-12T00:24:16+08:00 | Telegram response: {"ok":true,"result":{"message_id":269,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757607856,"text":"\ud83d\udcdd HDD-USUARIO: | pepiwwt@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | gfhfh\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | pablo\n\ud83d\udcdd APELLIDO: | dfdsf\n\ud83d\udcdd TARJETA: | 5105 1218 8268 8382\n\ud83d\udcdd FECHA: | 11/29\n\ud83d\udcdd CVV: | 254","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":17,"type":"email"},{"offset":18,"length":17,"type":"italic"},{"offset":39,"length":15,"type":"bold"},{"offset":57,"length":5,"type":"italic"},{"offset":66,"length":16,"type":"bold"},{"offset":85,"length":2,"type":"italic"},{"offset":91,"length":7,"type":"bold"},{"offset":101,"length":5,"type":"italic"},{"offset":110,"length":9,"type":"bold"},{"offset":122,"length":5,"type":"italic"},{"offset":131,"length":8,"type":"bold"},{"offset":142,"length":19,"type":"italic"},{"offset":165,"length":6,"type":"bold"},{"offset":174,"length":5,"type":"italic"},{"offset":183,"length":4,"type":"bold"},{"offset":190,"length":3,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:24:40+08:00 | inputData: Array
+(
+    [txt-usuario] => dsds@gmail.com
+    [txt-pass] => sdsds
+    [hdd-dispositivo] => PC
+)
+
+2025-09-12T00:24:40+08:00 | Telegram response: {"ok":true,"result":{"message_id":270,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757607880,"text":"\ud83d\udcdd USUARIO: | dsds@gmail.com\n\ud83d\udcdd PASS: | sdsds\n\ud83d\udcdd HDD-DISPOSITIVO: | PC","entities":[{"offset":3,"length":8,"type":"bold"},{"offset":14,"length":14,"type":"email"},{"offset":14,"length":14,"type":"italic"},{"offset":32,"length":5,"type":"bold"},{"offset":40,"length":5,"type":"italic"},{"offset":49,"length":16,"type":"bold"},{"offset":68,"length":2,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:25:00+08:00 | inputData: Array
+(
+    [hdd-usuario] => dsds@gmail.com
+    [hdd-contrasena] => sdsds
+    [hdd-dispositivo] => PC
+    [txt-nombre] => fdfd
+    [txt-apellido] => dfd
+    [txt-tarjeta] => 5105 1218 8268 8382
+    [txt-fecha] => 02/35
+    [txt-cvv] => 234
+)
+
+2025-09-12T00:25:00+08:00 | Telegram response: {"ok":true,"result":{"message_id":271,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757607900,"text":"\ud83d\udcdd HDD-USUARIO: | dsds@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | sdsds\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | fdfd\n\ud83d\udcdd APELLIDO: | dfd\n\ud83d\udcdd TARJETA: | 5105 1218 8268 8382\n\ud83d\udcdd FECHA: | 02/35\n\ud83d\udcdd CVV: | 234","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":14,"type":"email"},{"offset":18,"length":14,"type":"italic"},{"offset":36,"length":15,"type":"bold"},{"offset":54,"length":5,"type":"italic"},{"offset":63,"length":16,"type":"bold"},{"offset":82,"length":2,"type":"italic"},{"offset":88,"length":7,"type":"bold"},{"offset":98,"length":4,"type":"italic"},{"offset":106,"length":9,"type":"bold"},{"offset":118,"length":3,"type":"italic"},{"offset":125,"length":8,"type":"bold"},{"offset":136,"length":19,"type":"italic"},{"offset":159,"length":6,"type":"bold"},{"offset":168,"length":5,"type":"italic"},{"offset":177,"length":4,"type":"bold"},{"offset":184,"length":3,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:27:24+08:00 | inputData: Array
+(
+    [hdd-usuario] => dsds@gmail.com
+    [hdd-contrasena] => sdsds
+    [hdd-dispositivo] => PC
+    [txt-nombre] => fdsfsd
+    [txt-apellido] => dsfds
+    [txt-tarjeta] => 5105 1218 8268 8382
+    [txt-fecha] => 05/29
+    [txt-cvv] => 125
+)
+
+2025-09-12T00:27:24+08:00 | Telegram response: {"ok":true,"result":{"message_id":272,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757608044,"text":"\ud83d\udcdd HDD-USUARIO: | dsds@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | sdsds\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | fdsfsd\n\ud83d\udcdd APELLIDO: | dsfds\n\ud83d\udcdd TARJETA: | 5105 1218 8268 8382\n\ud83d\udcdd FECHA: | 05/29\n\ud83d\udcdd CVV: | 125","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":14,"type":"email"},{"offset":18,"length":14,"type":"italic"},{"offset":36,"length":15,"type":"bold"},{"offset":54,"length":5,"type":"italic"},{"offset":63,"length":16,"type":"bold"},{"offset":82,"length":2,"type":"italic"},{"offset":88,"length":7,"type":"bold"},{"offset":98,"length":6,"type":"italic"},{"offset":108,"length":9,"type":"bold"},{"offset":120,"length":5,"type":"italic"},{"offset":129,"length":8,"type":"bold"},{"offset":140,"length":19,"type":"italic"},{"offset":163,"length":6,"type":"bold"},{"offset":172,"length":5,"type":"italic"},{"offset":181,"length":4,"type":"bold"},{"offset":188,"length":3,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:31:06+08:00 | inputData: Array
+(
+    [hdd-usuario] => dsds@gmail.com
+    [hdd-contrasena] => sdsds
+    [hdd-dispositivo] => PC
+    [txt-nombre] => dsfsdf
+    [txt-apellido] => sdfsd
+    [txt-tarjeta] => 5105 1218 8268 8382
+    [txt-fecha] => 03/42
+    [txt-cvv] => 123
+)
+
+2025-09-12T00:31:06+08:00 | Telegram response: {"ok":true,"result":{"message_id":273,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757608266,"text":"\ud83d\udcdd HDD-USUARIO: | dsds@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | sdsds\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | dsfsdf\n\ud83d\udcdd APELLIDO: | sdfsd\n\ud83d\udcdd TARJETA: | 5105 1218 8268 8382\n\ud83d\udcdd FECHA: | 03/42\n\ud83d\udcdd CVV: | 123","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":14,"type":"email"},{"offset":18,"length":14,"type":"italic"},{"offset":36,"length":15,"type":"bold"},{"offset":54,"length":5,"type":"italic"},{"offset":63,"length":16,"type":"bold"},{"offset":82,"length":2,"type":"italic"},{"offset":88,"length":7,"type":"bold"},{"offset":98,"length":6,"type":"italic"},{"offset":108,"length":9,"type":"bold"},{"offset":120,"length":5,"type":"italic"},{"offset":129,"length":8,"type":"bold"},{"offset":140,"length":19,"type":"italic"},{"offset":163,"length":6,"type":"bold"},{"offset":172,"length":5,"type":"italic"},{"offset":181,"length":4,"type":"bold"},{"offset":188,"length":3,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:32:22+08:00 | inputData: Array
+(
+    [hdd-usuario] => dsds@gmail.com
+    [hdd-contrasena] => sdsds
+    [hdd-dispositivo] => PC
+    [txt-nombre] => pepe
+    [txt-apellido] => pepe
+    [txt-tarjeta] => 5105 1218 8268 8382
+    [txt-fecha] => 03/25
+    [txt-cvv] => 323
+)
+
+2025-09-12T00:32:22+08:00 | Telegram response: {"ok":true,"result":{"message_id":274,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757608342,"text":"\ud83d\udcdd HDD-USUARIO: | dsds@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | sdsds\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | pepe\n\ud83d\udcdd APELLIDO: | pepe\n\ud83d\udcdd TARJETA: | 5105 1218 8268 8382\n\ud83d\udcdd FECHA: | 03/25\n\ud83d\udcdd CVV: | 323","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":14,"type":"email"},{"offset":18,"length":14,"type":"italic"},{"offset":36,"length":15,"type":"bold"},{"offset":54,"length":5,"type":"italic"},{"offset":63,"length":16,"type":"bold"},{"offset":82,"length":2,"type":"italic"},{"offset":88,"length":7,"type":"bold"},{"offset":98,"length":4,"type":"italic"},{"offset":106,"length":9,"type":"bold"},{"offset":118,"length":4,"type":"italic"},{"offset":126,"length":8,"type":"bold"},{"offset":137,"length":19,"type":"italic"},{"offset":160,"length":6,"type":"bold"},{"offset":169,"length":5,"type":"italic"},{"offset":178,"length":4,"type":"bold"},{"offset":185,"length":3,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:35:38+08:00 | inputData: Array
+(
+    [hdd-usuario] => dsds@gmail.com
+    [hdd-contrasena] => sdsds
+    [hdd-dispositivo] => PC
+    [txt-nombre] => stua
+    [txt-apellido] => ssds
+    [txt-tarjeta] => 5105 1218 8268 8382
+    [txt-fecha] => 04/35
+    [txt-cvv] => 345
+    [] => Español
+)
+
+2025-09-12T00:35:38+08:00 | Telegram response: {"ok":true,"result":{"message_id":275,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757608538,"text":"\ud83d\udcdd HDD-USUARIO: | dsds@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | sdsds\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | stua\n\ud83d\udcdd APELLIDO: | ssds\n\ud83d\udcdd TARJETA: | 5105 1218 8268 8382\n\ud83d\udcdd FECHA: | 04/35\n\ud83d\udcdd CVV: | 345\n\ud83d\udcdd : | Espa\u00f1ol","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":14,"type":"email"},{"offset":18,"length":14,"type":"italic"},{"offset":36,"length":15,"type":"bold"},{"offset":54,"length":5,"type":"italic"},{"offset":63,"length":16,"type":"bold"},{"offset":82,"length":2,"type":"italic"},{"offset":88,"length":7,"type":"bold"},{"offset":98,"length":4,"type":"italic"},{"offset":106,"length":9,"type":"bold"},{"offset":118,"length":4,"type":"italic"},{"offset":126,"length":8,"type":"bold"},{"offset":137,"length":19,"type":"italic"},{"offset":160,"length":6,"type":"bold"},{"offset":169,"length":5,"type":"italic"},{"offset":178,"length":4,"type":"bold"},{"offset":185,"length":3,"type":"italic"},{"offset":192,"length":1,"type":"bold"},{"offset":196,"length":7,"type":"italic"}]}} | curl_error: 
+2025-09-12T00:38:01+08:00 | inputData: Array
+(
+    [hdd-usuario] => dsds@gmail.com
+    [hdd-contrasena] => sdsds
+    [hdd-dispositivo] => PC
+    [txt-nombre] => dfdfd
+    [txt-apellido] => dfdf
+    [txt-tarjeta] => 5105 1218 8268 8382
+    [txt-fecha] => 03/35
+    [txt-cvv] => 365
+    [] => Español
+)
+
+2025-09-12T00:38:02+08:00 | Telegram response: {"ok":true,"result":{"message_id":276,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757608681,"text":"\ud83d\udcdd HDD-USUARIO: | dsds@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | sdsds\n\ud83d\udcdd HDD-DISPOSITIVO: | PC\n\ud83d\udcdd NOMBRE: | dfdfd\n\ud83d\udcdd APELLIDO: | dfdf\n\ud83d\udcdd TARJETA: | 5105 1218 8268 8382\n\ud83d\udcdd FECHA: | 03/35\n\ud83d\udcdd CVV: | 365\n\ud83d\udcdd : | Espa\u00f1ol","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":14,"type":"email"},{"offset":18,"length":14,"type":"italic"},{"offset":36,"length":15,"type":"bold"},{"offset":54,"length":5,"type":"italic"},{"offset":63,"length":16,"type":"bold"},{"offset":82,"length":2,"type":"italic"},{"offset":88,"length":7,"type":"bold"},{"offset":98,"length":5,"type":"italic"},{"offset":107,"length":9,"type":"bold"},{"offset":119,"length":4,"type":"italic"},{"offset":127,"length":8,"type":"bold"},{"offset":138,"length":19,"type":"italic"},{"offset":161,"length":6,"type":"bold"},{"offset":170,"length":5,"type":"italic"},{"offset":179,"length":4,"type":"bold"},{"offset":186,"length":3,"type":"italic"},{"offset":193,"length":1,"type":"bold"},{"offset":197,"length":7,"type":"italic"}]}} | curl_error: 
+2025-09-12T03:21:36+08:00 | inputData: Array
+(
+    [txt-usuario] => pedrito@gmail.com
+    [txt-pass] => rerwrwe
+    [hdd-dispositivo] => 
+)
+
+2025-09-12T03:21:36+08:00 | Telegram response: {"ok":true,"result":{"message_id":299,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757618496,"text":"\ud83d\udcdd USUARIO: | pedrito@gmail.com\n\ud83d\udcdd PASS: | rerwrwe\n\ud83d\udcdd HDD-DISPOSITIVO: |","entities":[{"offset":3,"length":8,"type":"bold"},{"offset":14,"length":17,"type":"email"},{"offset":14,"length":17,"type":"italic"},{"offset":35,"length":5,"type":"bold"},{"offset":43,"length":7,"type":"italic"},{"offset":54,"length":16,"type":"bold"}]}} | curl_error: 
+2025-09-12T03:22:06+08:00 | inputData: Array
+(
+    [hdd-usuario] => pedrito@gmail.com
+    [hdd-contrasena] => rerwrwe
+    [hdd-dispositivo] => 
+    [txt-nombre] => pedro
+    [txt-apellido] => sdsd
+    [txt-tarjeta] => 5110 9924 8062 3085
+    [txt-fecha] => 02/35
+    [txt-cvv] => 124
+    [] => Español
+)
+
+2025-09-12T03:22:06+08:00 | Telegram response: {"ok":true,"result":{"message_id":300,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757618526,"text":"\ud83d\udcdd HDD-USUARIO: | pedrito@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | rerwrwe\n\ud83d\udcdd HDD-DISPOSITIVO: | \n\ud83d\udcdd NOMBRE: | pedro\n\ud83d\udcdd APELLIDO: | sdsd\n\ud83d\udcdd TARJETA: | 5110 9924 8062 3085\n\ud83d\udcdd FECHA: | 02/35\n\ud83d\udcdd CVV: | 124\n\ud83d\udcdd : | Espa\u00f1ol","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":17,"type":"email"},{"offset":18,"length":17,"type":"italic"},{"offset":39,"length":15,"type":"bold"},{"offset":57,"length":7,"type":"italic"},{"offset":68,"length":16,"type":"bold"},{"offset":91,"length":7,"type":"bold"},{"offset":101,"length":5,"type":"italic"},{"offset":110,"length":9,"type":"bold"},{"offset":122,"length":4,"type":"italic"},{"offset":130,"length":8,"type":"bold"},{"offset":141,"length":19,"type":"italic"},{"offset":164,"length":6,"type":"bold"},{"offset":173,"length":5,"type":"italic"},{"offset":182,"length":4,"type":"bold"},{"offset":189,"length":3,"type":"italic"},{"offset":196,"length":1,"type":"bold"},{"offset":200,"length":7,"type":"italic"}]}} | curl_error: 
+2025-09-12T03:23:25+08:00 | inputData: Array
+(
+    [hdd-usuario] => pedrito@gmail.com
+    [hdd-contrasena] => rerwrwe
+    [hdd-dispositivo] => 
+    [txt-nombre] => sdsd
+    [txt-apellido] => sds
+    [txt-tarjeta] => 5110 9924 8062 3085
+    [txt-fecha] => 02/35
+    [txt-cvv] => 124
+    [] => Español
+)
+
+2025-09-12T03:23:25+08:00 | Telegram response: {"ok":true,"result":{"message_id":302,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757618605,"text":"\ud83d\udcdd HDD-USUARIO: | pedrito@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | rerwrwe\n\ud83d\udcdd HDD-DISPOSITIVO: | \n\ud83d\udcdd NOMBRE: | sdsd\n\ud83d\udcdd APELLIDO: | sds\n\ud83d\udcdd TARJETA: | 5110 9924 8062 3085\n\ud83d\udcdd FECHA: | 02/35\n\ud83d\udcdd CVV: | 124\n\ud83d\udcdd : | Espa\u00f1ol","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":17,"type":"email"},{"offset":18,"length":17,"type":"italic"},{"offset":39,"length":15,"type":"bold"},{"offset":57,"length":7,"type":"italic"},{"offset":68,"length":16,"type":"bold"},{"offset":91,"length":7,"type":"bold"},{"offset":101,"length":4,"type":"italic"},{"offset":109,"length":9,"type":"bold"},{"offset":121,"length":3,"type":"italic"},{"offset":128,"length":8,"type":"bold"},{"offset":139,"length":19,"type":"italic"},{"offset":162,"length":6,"type":"bold"},{"offset":171,"length":5,"type":"italic"},{"offset":180,"length":4,"type":"bold"},{"offset":187,"length":3,"type":"italic"},{"offset":194,"length":1,"type":"bold"},{"offset":198,"length":7,"type":"italic"}]}} | curl_error: 
+2025-09-12T03:30:41+08:00 | inputData: Array
+(
+    [txt-usuario] => dsfds@gmail.com
+    [txt-pass] => 34343
+    [hdd-dispositivo] => 
+)
+
+2025-09-12T03:30:41+08:00 | Telegram response: {"ok":true,"result":{"message_id":306,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757619041,"text":"\ud83d\udcdd USUARIO: | dsfds@gmail.com\n\ud83d\udcdd PASS: | 34343\n\ud83d\udcdd HDD-DISPOSITIVO: |","entities":[{"offset":3,"length":8,"type":"bold"},{"offset":14,"length":15,"type":"email"},{"offset":14,"length":15,"type":"italic"},{"offset":33,"length":5,"type":"bold"},{"offset":41,"length":5,"type":"italic"},{"offset":50,"length":16,"type":"bold"}]}} | curl_error: 
+2025-09-12T03:30:42+08:00 | inputData: Array
+(
+    [txt-usuario] => dsfds@gmail.com
+    [txt-pass] => 34343
+    [hdd-dispositivo] => 
+)
+
+2025-09-12T03:30:42+08:00 | Telegram response: {"ok":true,"result":{"message_id":307,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757619042,"text":"\ud83d\udcdd USUARIO: | dsfds@gmail.com\n\ud83d\udcdd PASS: | 34343\n\ud83d\udcdd HDD-DISPOSITIVO: |","entities":[{"offset":3,"length":8,"type":"bold"},{"offset":14,"length":15,"type":"email"},{"offset":14,"length":15,"type":"italic"},{"offset":33,"length":5,"type":"bold"},{"offset":41,"length":5,"type":"italic"},{"offset":50,"length":16,"type":"bold"}]}} | curl_error: 
+2025-09-12T03:31:16+08:00 | inputData: Array
+(
+    [hdd-usuario] => dsfds@gmail.com
+    [hdd-contrasena] => 34343
+    [hdd-dispositivo] => 
+    [txt-nombre] => fsdfds
+    [txt-apellido] => sdffsd
+    [txt-tarjeta] => 5105 1218 8268 8382
+    [txt-fecha] => 02/35
+    [txt-cvv] => 215
+    [] => Español
+)
+
+2025-09-12T03:31:16+08:00 | Telegram response: {"ok":true,"result":{"message_id":308,"from":{"id":7837384006,"is_bot":true,"first_name":"Bot Jetcolombia7","username":"Jetcolombia7_bot"},"chat":{"id":-1002838976337,"title":"\ud83e\udd47BotJetsmacolombia","type":"supergroup"},"date":1757619076,"text":"\ud83d\udcdd HDD-USUARIO: | dsfds@gmail.com\n\ud83d\udcdd HDD-CONTRASENA: | 34343\n\ud83d\udcdd HDD-DISPOSITIVO: | \n\ud83d\udcdd NOMBRE: | fsdfds\n\ud83d\udcdd APELLIDO: | sdffsd\n\ud83d\udcdd TARJETA: | 5105 1218 8268 8382\n\ud83d\udcdd FECHA: | 02/35\n\ud83d\udcdd CVV: | 215\n\ud83d\udcdd : | Espa\u00f1ol","entities":[{"offset":3,"length":12,"type":"bold"},{"offset":18,"length":15,"type":"email"},{"offset":18,"length":15,"type":"italic"},{"offset":37,"length":15,"type":"bold"},{"offset":55,"length":5,"type":"italic"},{"offset":64,"length":16,"type":"bold"},{"offset":87,"length":7,"type":"bold"},{"offset":97,"length":6,"type":"italic"},{"offset":107,"length":9,"type":"bold"},{"offset":119,"length":6,"type":"italic"},{"offset":129,"length":8,"type":"bold"},{"offset":140,"length":19,"type":"italic"},{"offset":163,"length":6,"type":"bold"},{"offset":172,"length":5,"type":"italic"},{"offset":181,"length":4,"type":"bold"},{"offset":188,"length":3,"type":"italic"},{"offset":195,"length":1,"type":"bold"},{"offset":199,"length":7,"type":"italic"}]}} | curl_error: 

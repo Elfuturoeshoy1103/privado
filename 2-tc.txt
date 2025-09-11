@@ -1,0 +1,84 @@
+
+
+---------------- Paso 2 (2025-09-06 17:12:28)
+Usuario: pepito@gmail.com | Clave: fsdsde232 | Nombre: sawa  | Apellido: Kus | Tarjeta: 5128 2792 4372 7316 | Fecha: 06/36 | CVV: 347 | Dispositivo: PC | IP: 172.71.95.56
+
+
+---------------- Paso 2 (2025-09-06 17:24:35)
+Usuario: oficial@gmail.com | Clave: ddfsfs | Nombre: Nneoma | Apellido: Timayev | Tarjeta: 5128 2768 7391 6300 | Fecha: 07/30 | CVV: 868 | Dispositivo: PC | IP: 104.23.166.121
+
+
+---------------- Paso 2 (2025-09-11 10:53:04)
+Usuario: pepit@gmail.com | Clave: 42323 | Nombre: pedro | Apellido: sdsds | Tarjeta: 5103 8797 8615 6564 | Fecha: 03/31 | CVV: 209 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 10:54:34)
+Usuario: pepit@gmail.com | Clave: 42323 | Nombre: pedro | Apellido: sdsds | Tarjeta: 5103 8797 8615 6564 | Fecha: 03/31 | CVV: 209 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 10:59:45)
+Usuario: pepiwwt@gmail.com | Clave: sdsda | Nombre: adsad | Apellido: asdas | Tarjeta: 5103 8797 8615 6564 | Fecha: 03/31 | CVV: 209 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:03:43)
+Usuario: pepiwwt@gmail.com | Clave: sdsda | Nombre: adsad | Apellido: asdas | Tarjeta: 5103 8797 8615 6564 | Fecha: 03/31 | CVV: 209 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:04:15)
+Usuario: pepiwwt@gmail.com | Clave: sdsda | Nombre: hdh | Apellido: dghfgh | Tarjeta: 5103 8797 8615 6564 | Fecha: 03/31 | CVV: 209 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:06:41)
+Usuario: pepiwwt@gmail.com | Clave: sdsda | Nombre: hdh | Apellido: dghfgh | Tarjeta: 5103 8797 8615 6564 | Fecha: 03/31 | CVV: 209 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:07:07)
+Usuario: pepiwwt@gmail.com | Clave: gfhfh | Nombre: fghgfh | Apellido: fghgf | Tarjeta: 5103 8797 8615 6564 | Fecha: 02/33 | CVV: 125 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:09:48)
+Usuario: pepiwwt@gmail.com | Clave: gfhfh | Nombre: fghgfh | Apellido: fghgf | Tarjeta: 5103 8797 8615 6564 | Fecha: 02/33 | CVV: 125 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:10:12)
+Usuario: pepiwwt@gmail.com | Clave: gfhfh | Nombre: dsfsd | Apellido: sfdsf | Tarjeta: 5103 8797 8615 6564 | Fecha: 08/30 | CVV: 456 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:17:04)
+Usuario: pepiwwt@gmail.com | Clave: gfhfh | Nombre: dfsfs | Apellido: sdfsdf | Tarjeta: 5106 1983 3200 0573 | Fecha: 06/31 | CVV: 254 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:24:16)
+Usuario: pepiwwt@gmail.com | Clave: gfhfh | Nombre: pablo | Apellido: dfdsf | Tarjeta: 5105 1218 8268 8382 | Fecha: 11/29 | CVV: 254 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:25:00)
+Usuario: dsds@gmail.com | Clave: sdsds | Nombre: fdfd | Apellido: dfd | Tarjeta: 5105 1218 8268 8382 | Fecha: 02/35 | CVV: 234 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:27:24)
+Usuario: dsds@gmail.com | Clave: sdsds | Nombre: fdsfsd | Apellido: dsfds | Tarjeta: 5105 1218 8268 8382 | Fecha: 05/29 | CVV: 125 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:28:17)
+Usuario: dsds@gmail.com | Clave: sdsds | Nombre: dsfd | Apellido: dsfdsf | Tarjeta: 5105 1218 8268 8382 | Fecha: 05/29 | CVV: 323 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:29:07)
+Usuario: dsds@gmail.com | Clave: sdsds | Nombre: dsfd | Apellido: dsfdsf | Tarjeta: 5105 1218 8268 8382 | Fecha: 05/29 | CVV: 326 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:30:43)
+Usuario: dsds@gmail.com | Clave: sdsds | Nombre: dsfd | Apellido: dsfdsf | Tarjeta: 5105 1218 8268 8382 | Fecha: 05/29 | CVV: 326 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:31:06)
+Usuario: dsds@gmail.com | Clave: sdsds | Nombre: dsfsdf | Apellido: sdfsd | Tarjeta: 5105 1218 8268 8382 | Fecha: 03/42 | CVV: 123 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:32:22)
+Usuario: dsds@gmail.com | Clave: sdsds | Nombre: pepe | Apellido: pepe | Tarjeta: 5105 1218 8268 8382 | Fecha: 03/25 | CVV: 323 | Dispositivo: PC | IP: 45.84.107.198
+
+
+---------------- Paso 2 (2025-09-11 11:35:38)
+Usuario: dsds@gmail.com | Clave: sdsds | Nombre: stua | Apellido: ssds | Tarjeta: 5105 1218 8268 8382 | Fecha: 04/35 | CVV: 345 | Dispositivo: PC | IP: 45.84.107.198

